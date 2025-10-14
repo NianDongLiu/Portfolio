@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Games - Anthony Liu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="header-fixed">
+        <div id="title" onclick="window.location.href='index.html'">Anthony Liu Portfolio</div>
+        <div id="links">
+            <a href="games.html" class="active">Games</a>
+            <a href="about.html" style="margin:0px 60px;">About Me</a>
+            <a href="otherworks.html">Other Works</a>
+        </div>
+    </div>
+
+    <div id="page-content">
+        <div class="page-header">
+            <h1>Games</h1>
+        </div>
+
+        <!-- Project 1: Parasoul -->
+        <div class="project">
+            <h2>Parasoul</h2>
+
+            <!-- 方案1: 嵌入YouTube视频（推荐） -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/Dycrq2do6xY"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- 方案2: 图片轮播（如果你不想用视频，删除上面的video-container，取消下面的注释）
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <button class="gallery-btn prev" onclick="changeSlide('parasoul', -1)">&#10094;</button>
+                    <div class="slides" id="parasoul-slides">
+                        <img src="images/changjing1.jpg" class="slide active" alt="Parasoul Screenshot 1">
+                        <img src="images/changjing2.jpg" class="slide" alt="Parasoul Screenshot 2">
+                        <img src="images/changjing3.jpg" class="slide" alt="Parasoul Screenshot 3">
+                    </div>
+                    <button class="gallery-btn next" onclick="changeSlide('parasoul', 1)">&#10095;</button>
+                </div>
+                <div class="slide-indicators" id="parasoul-indicators">
+                    <span class="indicator active" onclick="currentSlide('parasoul', 0)"></span>
+                    <span class="indicator" onclick="currentSlide('parasoul', 1)"></span>
+                    <span class="indicator" onclick="currentSlide('parasoul', 2)"></span>
+                </div>
+            </div>
+            -->
+
+            <div class="project-description">
+                Parasoul is a thrilling and high-stakes souls-like boss rush where players can battle countless challenging foes to increase in power and take on increasingly tougher enemies. Prove yourself against bosses, and equip yourself with upgrades from the market.
+            </div>
+            <button class="btn_two" onclick="window.open('https://www.youtube.com/watch?v=Dycrq2do6xY', '_blank')">Watch Gameplay</button>
+            <button class="btn_two" onclick="window.open('documents/parasoul-gdd.pdf', '_blank')">View GDD</button>
+        </div>
+
+        <!-- Project 2: Between -->
+        <div class="project">
+            <h2>Between</h2>
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="slides" id="between-slides">
+                        <div class="slide active placeholder-slide">
+                            <p>Screenshots Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-description">
+                Project description coming soon...
+            </div>
+            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">Watch Gameplay</button>
+            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View GDD</button>
+        </div>
+
+        <!-- Project 3: Life Simulator -->
+        <div class="project">
+            <h2>Life Simulator</h2>
+            <div class="project-gallery">
+                <div class="gallery-container">
+                    <div class="slides" id="lifesim-slides">
+                        <div class="slide active placeholder-slide">
+                            <p>Screenshots Coming Soon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-description">
+                A text-based simulation game built with p5.js, exploring life choices and their consequences through interactive storytelling.
+            </div>
+            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">Watch Gameplay</button>
+            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View GDD</button>
+        </div>
+
+        <!-- Project 4: Placeholder -->
+        <div class="project">
+            <h2>More Projects Coming Soon</h2>
+            <div class="project-description">
+                I am currently working on additional exciting projects. Stay tuned for updates!
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        © 2025 Anthony Liu (NianDong Liu) - All Rights Reserved
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+</body>
+</html>
