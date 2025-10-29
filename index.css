@@ -112,18 +112,18 @@ body, html {
             border-bottom: 2px solid #fff;
         }
 
-/* Home Page Styles */
+/* Home Page Styles - 恢复静态背景 */
 #home-container {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("images/bo2.jpg") center center fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-    display: flex;
-    justify-content: center;
+    width:100%;
+    height:100vh;
+    background:linear-gradient(0deg,rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url("images/bo2.jpg") center center fixed;
+    background-size:cover;
+    background-repeat:no-repeat;
+    color:white;
+    display:flex;
+    justify-content:center;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column;
 }
 
 #home-content {
@@ -132,13 +132,6 @@ body, html {
     padding: 0 20px;
 }
 
-    #home-content h1 {
-        font-size: 60px;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
 
     /* ??3?A Game Designer ???? */
     #home-content h2 {
@@ -205,6 +198,131 @@ body, html {
 }
 
 /* Video Container */
+
+/* 在原CSS文件的 Video Container 部分后添加 */
+
+/* Project Type Label */
+.project-type {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    margin: 10px 0 20px 0;
+    font-weight: 400;
+}
+
+/* Development Status */
+.dev-status {
+    font-size: 18px;
+    color: #FF416C;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+/* Video Note */
+.video-note {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Media Glow Effect (方案A) */
+.media-glow {
+    position: relative;
+    box-shadow: 
+        0 0 20px rgba(255, 65, 108, 0.3),
+        0 0 40px rgba(255, 75, 43, 0.2);
+    transition: all 0.4s ease;
+}
+
+.media-glow:hover {
+    box-shadow: 
+        0 0 30px rgba(255, 65, 108, 0.5),
+        0 0 60px rgba(255, 75, 43, 0.3),
+        0 0 80px rgba(255, 65, 108, 0.2);
+    transform: translateY(-5px);
+}
+
+.media-glow::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FF416C, #FF4B2B, #FF416C);
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.media-glow:hover::before {
+    opacity: 0.6;
+    animation: glow-rotate 3s linear infinite;
+}
+
+@keyframes glow-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* UX Subproject Styles */
+.ux-subproject {
+    margin: 40px 0;
+    padding: 30px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    border-left: 4px solid #FF416C;
+}
+
+.ux-subproject h3 {
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subproject-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.ux-subproject .project-description {
+    margin: 20px 0;
+}
+
+.ux-subproject .btn_two {
+    margin: 15px 10px 15px 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 900px){
+    .project-type {
+        font-size: 14px;
+    }
+    
+    .ux-subproject {
+        padding: 20px;
+    }
+    
+    .ux-subproject h3 {
+        font-size: 22px;
+    }
+    
+    .media-glow:hover {
+        transform: translateY(-2px);
+    }
+}
+
 .video-container {
     position: relative;
     width: 100%;
@@ -571,4 +689,191 @@ button:focus {
     100% {
         background-position: 0% 50%
     }
+}
+
+
+
+/* 子项目标题样式 */
+.subproject-title {
+    font-size: 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subproject-subtitle {
+    font-size: 16px;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* 移除旧的UX subproject样式 */
+.ux-subproject {
+    display: none;
+}
+
+/* 自定义弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    margin: 15% auto;
+    padding: 40px;
+    border: 2px solid #FF416C;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 
+        0 0 30px rgba(255, 65, 108, 0.5),
+        0 0 60px rgba(255, 75, 43, 0.3);
+    animation: slideDown 0.4s ease;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    color: #FF416C;
+    transform: rotate(90deg);
+}
+
+.modal-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.modal-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right, #FF416C 0%, #FF4B2B 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.9);
+}
+
+.modal-btn {
+    background: linear-gradient(to right, #FF416C 0%, #FF4B2B 100%);
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 响应式 */
+@media (max-width: 900px) {
+    .modal-content {
+        margin: 30% auto;
+        padding: 30px 20px;
+        width: 85%;
+    }
+    
+    .modal-icon {
+        font-size: 50px;
+    }
+    
+    .modal-content h3 {
+        font-size: 24px;
+    }
+    
+    .modal-content p {
+        font-size: 16px;
+    }
+}
+
+/* 视频占位符样式 */
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 30px 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.video-placeholder:hover {
+    transform: scale(1.02);
+}
+
+.video-placeholder .play-button {
+    position: absolute;
+    font-size: 100px;
+    color: #FF416C;
+    transition: 0.3s;
+}
+
+.video-placeholder:hover .play-button {
+    transform: scale(1.2);
+    color: #FF4B2B;
+}
+
+.video-placeholder p {
+    position: absolute;
+    bottom: 30px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
 }

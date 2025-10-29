@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Other Works - Anthony Liu</title>
+    <title>Other Works - NianDong Liu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -13,11 +13,11 @@
 </head>
 <body>
     <div id="header-fixed">
-        <div id="title" onclick="window.location.href='index.html'">Anthony Liu Portfolio</div>
+        <div id="title" onclick="window.location.href='index.html'">NianDong Liu Portfolio</div>
         <div id="links">
             <a href="games.html">Games</a>
-            <a href="about.html" style="margin:0px 60px;">About Me</a>
-            <a href="otherworks.html" class="active">Other Works</a>
+            <a href="otherworks.html" class="active" style="margin:0px 60px;">Other Works</a>
+            <a href="about.html">About Me</a>
         </div>
     </div>
 
@@ -26,68 +26,98 @@
             <h1>Other Works</h1>
         </div>
 
-        <!-- Other Work 1 -->
+        <!-- Project 1: Simple Design -->
         <div class="project">
-            <h2>Project Title 1</h2>
+            <h2>Simple Design</h2>
+            <p class="project-type">AI-Driven Narrative Development Tool</p>
+            
             <div class="project-gallery">
-                <div class="gallery-container">
-                    <div class="slides" id="other1-slides">
-                        <div class="slide active placeholder-slide">
-                            <p>Content Coming Soon</p>
-                        </div>
+                <div class="gallery-container media-glow">
+                    <button class="gallery-btn prev" onclick="changeSlide('simpledesign', -1)">&#10094;</button>
+                    <div class="slides" id="simpledesign-slides">
+                        <img src="images/Simple Design1.jpg" class="slide active" alt="Simple Design Interface 1">
+                        <img src="images/Simple Design2.jpg" class="slide" alt="Simple Design Interface 2">
                     </div>
+                    <button class="gallery-btn next" onclick="changeSlide('simpledesign', 1)">&#10095;</button>
+                </div>
+                <div class="slide-indicators" id="simpledesign-indicators">
+                    <span class="indicator active" onclick="currentSlide('simpledesign', 0)"></span>
+                    <span class="indicator" onclick="currentSlide('simpledesign', 1)"></span>
                 </div>
             </div>
+            
             <div class="project-description">
-                Project description to be added...
+                Simple Design is an innovative AI-assisted narrative development tool designed to streamline the process of creating game narratives and storyboards. Similar to Twine but enhanced with AI-powered writing assistance, this tool helps game designers and writers manage complex branching narratives more efficiently. The platform integrates artificial intelligence to suggest dialogue options, plot developments, and narrative branches while maintaining an intuitive visual interface for organizing story structures. Simple Design bridges the gap between traditional narrative design tools and modern AI capabilities, making it easier for creators to develop rich, interactive storytelling experiences without getting lost in the complexity of branching paths.
             </div>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View Project</button>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View PDF</button>
+            <button class="btn_two" onclick="showModal('Under Maintenance', 'This website is currently under maintenance. Coming back soon!')">Visit Website</button>
         </div>
 
-        <!-- Other Work 2 -->
+        <!-- Project 2: UX Research Projects -->
         <div class="project">
-            <h2>Project Title 2</h2>
-            <div class="project-gallery">
-                <div class="gallery-container">
-                    <div class="slides" id="other2-slides">
-                        <div class="slide active placeholder-slide">
-                            <p>Content Coming Soon</p>
-                        </div>
-                    </div>
+            <h2>UX Research Projects</h2>
+            <p class="project-type">User Experience Research & Design</p>
+            
+            <!-- Subproject 1 -->
+            <div class="project">
+                <h3 class="subproject-title">Starship Delivery Robots Research</h3>
+                <p class="subproject-subtitle">User Experience Research and Redesign</p>
+                <div class="project-description">
+                    This UX research project investigated Oregon State University students' experiences with Starship delivery robots through interviews, observations, and secondary research. The team identified common issues including spilled drinks, routing problems, sidewalk obstruction, and accessibility concerns. Through user interviews and behavioral observations, the research explored students' attitudes toward the robots and investigated potential alternative uses beyond food delivery, such as scavenger hunts, photography services, and campus events. The project employed UX design methodologies including scenario development, storyboarding, and user interviews to propose innovative solutions that could enhance the robots' value on campus while addressing current pain points.
                 </div>
+                <button class="btn_two" onclick="window.open('documents/UX.pdf', '_blank')">View Research Report</button>
+                <button class="btn_two" onclick="window.open('https://miro.com/app/board/uXjVLTdsStM=/', '_blank')">View Miro Board</button>
             </div>
-            <div class="project-description">
-                Project description to be added...
+
+            <!-- Subproject 2 -->
+            <div class="project">
+                <h3 class="subproject-title">In-Person Shopping Experience Enhancement</h3>
+                <p class="subproject-subtitle">Incentivizing In-Person Shopping: The Free Popcorn Solution</p>
+                <div class="project-description">
+                    This research project examined the declining trend of in-person shopping and proposed a solution to incentivize customers to visit physical stores through promotional offerings, specifically free popcorn. The team conducted user interviews to understand shopping preferences, analyzed the financial feasibility of implementing free snack programs in major retailers like Walmart, and developed a socio-technical analysis of how such programs would impact customer behavior and store operations. The research included detailed cost-benefit analysis showing that offering free popcorn would cost approximately 0.22-0.33% of Walmart's annual profit while potentially increasing foot traffic and customer satisfaction. The project utilized GOMS analysis, task analysis, and scenario-based design methodologies to demonstrate the practical implementation of this concept.
+                </div>
+                <button class="btn_two" onclick="window.open('documents/UX2.pdf', '_blank')">View Research Report</button>
+                <button class="btn_two" onclick="window.open('https://miro.com/app/board/uXjVLTdsStM=/', '_blank')">View Miro Board</button>
+                <button class="btn_two" onclick="window.open('https://youtu.be/I4vz6FKSqS8', '_blank')">Watch Final Video</button>
             </div>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View Project</button>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View PDF</button>
         </div>
 
-        <!-- Other Work 3 -->
-        <div class="project">
-            <h2>Project Title 3</h2>
-            <div class="project-gallery">
-                <div class="gallery-container">
-                    <div class="slides" id="other3-slides">
-                        <div class="slide active placeholder-slide">
-                            <p>Content Coming Soon</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="project-description">
-                Project description to be added...
-            </div>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View Project</button>
-            <button class="btn_two" disabled style="opacity: 0.5; cursor: not-allowed;">View PDF</button>
+<!-- Project 3: Theater & Performance -->
+<div class="project">
+    <h2>Theater & Performance</h2>
+    <p class="project-type">Acting & Script Adaptation | Stage Design</p>
+    
+    <!-- 用占位图片替代视频 -->
+    <div class="video-placeholder media-glow" onclick="window.open('https://youtu.be/admgGvN5z9k', '_blank')">
+        <div class="play-button">
+            <i class="fas fa-play-circle"></i>
         </div>
+        <p>Click to Watch on YouTube</p>
     </div>
+    
+    <div class="project-description">
+        In this theatrical production, I portrayed the character Tiejiang while simultaneously serving as co-writer and contributing to script adaptation and stage lighting design. This dual role provided invaluable insights into narrative construction and spatial storytelling—skills that directly translate to my game design practice. Working closely with the director and cast, I learned how to craft immersive experiences that engage audiences emotionally and intellectually. The process of blocking scenes, designing lighting cues to enhance dramatic moments, and understanding audience psychology taught me the delicate balance between player agency and directed experience. This theatrical background deeply informs my approach to environmental storytelling, pacing, and creating emotionally resonant game moments. The experience reinforced my belief that games, like theater, are fundamentally about creating meaningful connections between the creator's vision and the audience's experience.
+    </div>
+    <button class="btn_two" onclick="window.open('https://youtu.be/admgGvN5z9k', '_blank')">Watch Full Performance</button>
+</div>
+
+
+
 
     <div id="footer">
         © 2025 Anthony Liu (NianDong Liu) - All Rights Reserved
     </div>
 
-    <script src="index.js" type="text/javascript"></script>
+    <!-- 自定义弹窗 -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div class="modal-icon">⚠️</div>
+            <h3 id="modal-title">Notice</h3>
+            <p id="modal-message"></p>
+            <button class="modal-btn" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+<script src="index.js" type="text/javascript"></script>
 </body>
 </html>
